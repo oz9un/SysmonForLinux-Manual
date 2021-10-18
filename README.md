@@ -1,6 +1,12 @@
 # SysmonForLinux-Configs
 This repo contains specific configuration files for better understanding of sysmon configuration on Linux systems.
 
+## Activating a configuration file:
+You can activate following configuration files by:
+```bash
+sudo sysmon -c <xml_file>
+```
+
 ## Disabling logs for a specific event:
 As you know, [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) is just released and supports only 6 events from sysmon:
 - Event ID 3 == NetworkConnect
