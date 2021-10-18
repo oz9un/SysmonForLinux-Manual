@@ -8,12 +8,14 @@ sudo sysmon -c <xml_file>
 ```
 
 ## Disabling logs for a specific event:
-As you know, [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) is just released and supports only 6 events from sysmon:
+As you know, [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) is just released and supports only 8 events from sysmon:
+- Event ID 1  => ProcessCreate
 - Event ID 3  => NetworkConnect
 - Event ID 5  => ProcessTerminate
 - Event ID 9  => RawAccessRead
 - Event ID 10 => ProcessAccess
 - Event ID 11 => FileCreate
+- Event ID 16 => Sysmon Config Change
 - Event ID 23 => FileDelete
 
 And logs are stored in /var/log/syslog by default (path cannot be edited yet 😑)
