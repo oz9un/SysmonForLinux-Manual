@@ -41,3 +41,27 @@ Can be edited for specific purposes.
 
 ## only_ping.xml [gist](https://gist.github.com/oz9un/534a161a377f82f4d8d69dcba3e00ce0):
 This configuration file only logs 'ping' actions.
+
+## Network Specifications (network_specifications.xml) [gist](https://gist.github.com/oz9un/079114d034fb93d6dce22e1d0441d2cc):
+You can limit your network connections by specifically logging them.
+
+Example scenario:
+- Allow only tcp and udp protocols.
+- Allow only 80 and 443 ports.
+
+It can be expressed as: (protocol:tcp || protocol:udp) && (port:80 || port:443) 
+
+Expression above should outcome as True.
+
+Valid configuration for that purpose should contain:
+```xml
+    <RuleGroup name="" groupRelation="and">
+        <NetworkConnect onmatch="exclude">
+                <Protocol condition="is">tcp</Protocol>
+                <Protocol condition="is">udp</Protocol>
+                <DestinationPort condition="is">80</DestinationPort>
+                <DestinationPort condition="is">443</DestinationPort>
+        </NetworkConnect>
+    </RuleGroup>
+```
+**groupRelation="and"** is the critical part of that configuration.
