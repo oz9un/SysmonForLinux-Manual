@@ -26,6 +26,12 @@ For example, you can disable all ProcessTerminate events by:
 ```
 All other logs can be disabled with the use of 'include' nothing (example above).
 
+## all_disabled.xml [gist](https://gist.github.com/oz9un/95bda6a6c8be54df1a976a93eb6b8308):
+This configuration can be used as a main template. 
+
+All events are disabled in this configuration file.
+
+Can be edited for specific purposes.
 
 ## only_ping.xml [gist](https://gist.github.com/oz9un/534a161a377f82f4d8d69dcba3e00ce0):
 This configuration file only logs 'ping' actions.
