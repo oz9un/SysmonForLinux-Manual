@@ -7,9 +7,22 @@ You can activate following configuration files by:
 sudo sysmon -c <xml_file>
 ```
 ## SysmonForLinux Events & Description Fields:
-
 As you know, [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) is just released and supports only 8 events from sysmon:
-- Event ID 1  => ProcessCreate
+
+### ▶ Event ID 1 ➡ ProcessCreate
+This event logs TCP/UDP connections on the machine. 
+
+All Description Fields:
+| -  | -  | -  | -  |  - |
+|---|---|---|---|---|
+| **RuleName**  |  **UtcTime** |  **ProcessGuid** |**ProcessId**|  **Image** |
+|  **User** |  **Protocol** |  **Initiated** |  **SourceIsIpv6** | **SourceIp**  |
+| **SourceHostname**  | **SourcePort**  |  **SourcePortName** | **DestinationIsIpv6**  | **DestinationIp**  |
+| -  | **DestinationHostname**  |  **DestinationPort** | **DestinationPortName**  | -  |
+
+Example default configuration file: 
+
+
 - Event ID 3  => NetworkConnect
 - Event ID 5  => ProcessTerminate
 - Event ID 9  => RawAccessRead
