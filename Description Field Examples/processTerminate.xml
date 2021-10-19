@@ -1,0 +1,39 @@
+<Sysmon schemaversion="4.70">
+  <EventFiltering>
+    <!-- BELOW PART DISABLES ALL OTHER LOGS FOR FIXING THE MESS!-->
+    <!-- Event ID 1 == ProcessCreate. Log only ping process. -->
+    <RuleGroup name="" groupRelation="or">
+	    <ProcessCreate onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 3 == NetworkConnect Detected. Do not log anything!-->
+    <RuleGroup name="" groupRelation="or">
+    	<NetworkConnect onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 5 == ProcessTerminate. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+    	<ProcessTerminate onmatch="include">
+        <RuleName condition="is"></RuleName>
+        <UtcTime condition="is"></UtcTime>
+        <ProcessGuid condition="is"></ProcessGuid>
+        <ProcessId condition="is"></ProcessId>
+        <Image condition="is"></Image>
+      </ProcessTerminate>
+    </RuleGroup>
+    <!-- Event ID 9 == RawAccessRead. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+    	<RawAccessRead onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 10 == ProcessAccess. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+    	<ProcessAccess onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 11 == FileCreate. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+    	<FileCreate onmatch="include"/>
+    </RuleGroup>
+    <!--Event ID 23 == FileDelete. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+    	<FileDelete onmatch="include"/>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
