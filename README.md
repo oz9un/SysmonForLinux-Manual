@@ -12,9 +12,22 @@ sudo sysmon -c <xml_file>
 <p>&nbsp;</p>
 
 ## SysmonForLinux Events & Description Fields:
-As you know, [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) is just released and supports limited events from sysmon. These are the most critical and popular ones:
+As you know, [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) is just released and supports limited events from sysmon. 
+(ProcessCreate | FileCreateTime | NetworkConnect | ProcessTerminate | DriverLoad | ImageLoad | CreateRemoteThread | RawAccessRead | ProcessAccess | FileCreate | RegistryEvent | FileCreateStreamHash | PipeEvent | WmiEvent | DnsQuery | FileDelete | ClipboardChange | ProcessTampering | FileDeleteDetected)*, got (ServiceConfigurationChange )
+
+According to SysmonForLinux tool, configuration file expecting only following events:
+| ⚠  | ⚠  | ⚠  | ⚠  |  ⚠ |
+|---|---|---|---|---|
+| **ProcessCreate**  |  **FileCreateTime** |  **NetworkConnect** |**ProcessTerminate**|  **DriverLoad** |
+|  **ImageLoad** |  **CreateRemoteThread** |  **RawAccessRead** |  **ProcessAccess** | **FileCreate**  |
+| **RegistryEvent**  | **FileCreateStreamHash**  |  **PipeEvent** | **WmiEvent**  | **DnsQuery**  |
+| **FileDelete**  | **ClipboardChange**  |  - | **FileDeleteDetected**  | **ProcessTampering**  |
+
+⚠ But some of them still needs to be tested for Windows-Linux compatibility, I guess. ⚠
 
 <p>&nbsp;</p>
+
+#### These are the most critical and popular ones:
 
 ### ▶ Event ID 1 ➡ ProcessCreate
 This event provides extended information about newly created processes.
