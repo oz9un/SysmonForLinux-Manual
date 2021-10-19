@@ -12,7 +12,7 @@ sudo sysmon -c <xml_file>
 <p>&nbsp;</p>
 
 ## SysmonForLinux Events & Description Fields:
-As you know, [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) is just released and supports only 8 events from sysmon:
+As you know, [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) is just released and supports limited events from sysmon. These are the most critical and popular ones:
 
 <p>&nbsp;</p>
 
@@ -87,19 +87,29 @@ All Description Fields:
 
 ### ▶ Event ID 11 ➡ FileCreate
 This event detects when file is *created* or *overwrited*. This event can be useful when observing auto-startup folders, which are the favorite folder for malicious activites.
-
+    
 All Description Fields:
 | ⬇  | ⬇  | ⬇  | ⬇  |  ⬇ |
 |---|---|---|---|---|
 | **RuleName**  |  **UtcTime** |  **ProcessGuid** |**ProcessId**|  **Image** |
 |  -|  **TargetFilename** |  - |  **CreationUtcTime** | -  |
+    
 
 **Example default configuration file: [fileCreate.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/fileCreate.xml)**
 
+<p>&nbsp;</p>
 
-- Event ID 11 => FileCreate
-- Event ID 16 => Sysmon Config Change
-- Event ID 23 => FileDelete
+### ▶ Event ID 16 ➡ FileDelete
+This event detects when file is *shredded* or *deleted*.
+    
+All Description Fields:
+| ⬇  | ⬇  | ⬇  | ⬇  |  ⬇ |
+|---|---|---|---|---|
+| **RuleName**  |  **UtcTime** |  **ProcessGuid** |**ProcessId**|  **User** |
+|  **Image** |  **Hashes** |  - |  **IsExecutable** | **Archived**  |
+    
+
+**Example default configuration file: [fileDelete.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/fileDelete.xml)**
 
 <p>&nbsp;</p>
 
