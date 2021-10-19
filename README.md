@@ -1,4 +1,4 @@
-# SysmonForLinux-Configs
+# SysmonForLinux - Configuration Manual
 This repo contains specific configuration files for better understanding of sysmon configuration on Linux systems.
 
 ## Activating a configuration file:
@@ -34,17 +34,18 @@ For example, you can disable all ProcessTerminate events by:
 ```
 All other logs can be disabled with the use of 'include' nothing (example above).
 
-## all_disabled.xml [gist](https://gist.github.com/oz9un/95bda6a6c8be54df1a976a93eb6b8308):
+## Configuration Files for Template:
+### all_disabled.xml [gist](https://gist.github.com/oz9un/95bda6a6c8be54df1a976a93eb6b8308):
 This configuration can be used as a main template. 
 
 All events are disabled in this configuration file.
 
 Can be edited for specific purposes.
 
-## only_ping.xml [gist](https://gist.github.com/oz9un/534a161a377f82f4d8d69dcba3e00ce0):
+### only_ping.xml [gist](https://gist.github.com/oz9un/534a161a377f82f4d8d69dcba3e00ce0):
 This configuration file only logs 'ping' actions.
 
-## Network Specifications (network_specifications.xml) [gist](https://gist.github.com/oz9un/079114d034fb93d6dce22e1d0441d2cc):
+### Network Specifications (network_specifications.xml) [gist](https://gist.github.com/oz9un/079114d034fb93d6dce22e1d0441d2cc):
 You can limit your network connections by specifically logging them.
 
 Example scenario:
