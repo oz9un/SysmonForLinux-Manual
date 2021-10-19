@@ -1,0 +1,39 @@
+<Sysmon schemaversion="4.70">
+  <EventFiltering>
+    <!-- Event ID 3 == NetworkConnect Detected. Do not log anything!-->
+    <RuleGroup name="" groupRelation="and">
+        <NetworkConnect onmatch="exclude">
+                <Protocol condition="is">tcp</Protocol>
+                <Protocol condition="is">udp</Protocol>
+                <DestinationPort condition="is">80</DestinationPort>
+                <DestinationPort condition="is">443</DestinationPort>
+        </NetworkConnect>
+    </RuleGroup>
+    <!-- BELOW PART DISABLES ALL OTHER LOGS FOR FIXING THE MESS!-->
+    <!-- Event ID 1 == ProcessCreate. Log only ping process. -->
+    <RuleGroup name="" groupRelation="or">
+        <ProcessCreate onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 5 == ProcessTerminate. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+        <ProcessTerminate onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 9 == RawAccessRead. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+        <RawAccessRead onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 10 == ProcessAccess. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+        <ProcessAccess onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 11 == FileCreate. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+        <FileCreate onmatch="include"/>
+    </RuleGroup>
+    <!--Event ID 23 == FileDelete. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+        <FileDelete onmatch="include"/>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
+
