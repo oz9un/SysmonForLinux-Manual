@@ -10,7 +10,6 @@ sudo sysmon -c <xml_file>
 As you know, [SysmonForLinux](https://github.com/Sysinternals/SysmonForLinux) is just released and supports only 8 events from sysmon:
 
 ### ▶ Event ID 1 ➡ ProcessCreate
-
 This event provides extended information about newly created processes.
 
 All Description Fields:
@@ -26,7 +25,6 @@ Example default configuration file: [processCreate.xml](https://github.com/oz9un
 
 
 ### ▶ Event ID 3 ➡ NetworkConnect
-
 This event logs TCP/UDP connections on the machine. 
 
 All Description Fields:
@@ -37,7 +35,17 @@ All Description Fields:
 | **SourceHostname**  | **SourcePort**  |  **SourcePortName** | **DestinationIsIpv6**  | **DestinationIp**  |
 | -  | **DestinationHostname**  |  **DestinationPort** | **DestinationPortName**  | -  |
 
-Example default configuration file: [networkConnections.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/networkConnections.xml
+Example default configuration file: [networkConnections.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/networkConnections.xml)
+
+### ▶ Event ID 5 ➡ ProcessTerminate
+This event provides information about newly terminated processes.
+
+All Description Fields:
+| ⬇  | ⬇  | ⬇  | ⬇  |  ⬇ |
+|---|---|---|---|---|
+| **RuleName**  |  **UtcTime** |  **ProcessGuid** |**ProcessId**|  **Image** |
+
+Example default configuration file: [processTerminate.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/processTerminate.xml)
 
 - Event ID 3  => NetworkConnect
 - Event ID 5  => ProcessTerminate
