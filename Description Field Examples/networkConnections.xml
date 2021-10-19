@@ -1,0 +1,50 @@
+<Sysmon schemaversion="4.70">
+  <EventFiltering>
+    <RuleGroup name="" groupRelation="or">
+	    <ProcessCreate onmatch="include" />
+    </RuleGroup>
+    
+    <RuleGroup name="" groupRelation="or">
+    	<ProcessTerminate onmatch="include" />
+    </RuleGroup>
+    
+    <RuleGroup name="" groupRelation="or">
+    	<RawAccessRead onmatch="include" />
+    </RuleGroup>
+    
+    <RuleGroup name="" groupRelation="or">
+    	<ProcessAccess onmatch="include" />
+    </RuleGroup>
+    
+    <RuleGroup name="" groupRelation="or">
+    	<FileCreate onmatch="include" />
+    </RuleGroup>
+    
+    <RuleGroup name="" groupRelation="or">
+    	<FileDelete onmatch="include" />
+    </RuleGroup>
+    
+    <RuleGroup name="autoCreated" groupRelation="or">
+      <NetworkConnect onmatch="include">
+        <RuleName condition="">value</RuleName> 
+        <UtcTime condition="">value</UtcTime> 
+        <ProcessGuid condition="">value</ProcessGuid> 
+        <ProcessId condition="">value</ProcessId> 
+        <Image condition="">value</Image> 
+        <User condition="">value</User> 
+        <Protocol condition="">value</Protocol> 
+        <Initiated condition="">value</Initiated> 
+        <SourceIsIpv6 condition="">value</SourceIsIpv6> 
+        <SourceIp condition="">value</SourceIp> 
+        <SourceHostname condition="">value</SourceHostname> 
+        <SourcePort condition="">value</SourcePort> 
+        <SourcePortName condition="">value</SourcePortName> 
+        <DestinationIsIpv6 condition="">value</DestinationIsIpv6> 
+        <DestinationIp condition="">value</DestinationIp> 
+        <DestinationHostname condition="">value</DestinationHostname> 
+        <DestinationPort condition="">value</DestinationPort> 
+        <DestinationPortName condition="">value</DestinationPortName>
+      </NetworkConnect>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
