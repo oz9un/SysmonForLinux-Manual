@@ -20,8 +20,7 @@ All Description Fields:
 | **SourceHostname**  | **SourcePort**  |  **SourcePortName** | **DestinationIsIpv6**  | **DestinationIp**  |
 | -  | **DestinationHostname**  |  **DestinationPort** | **DestinationPortName**  | -  |
 
-Example default configuration file: 
-
+Example default configuration file: [network_specifications.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Configuration%20Templates/network_specifications.xml)
 
 - Event ID 3  => NetworkConnect
 - Event ID 5  => ProcessTerminate
