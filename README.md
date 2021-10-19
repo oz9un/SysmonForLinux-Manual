@@ -21,7 +21,7 @@ All Description Fields:
 | **ParentProcessGuid** | **TerminalSessionId**  |  **IntegrityLevel** | **Hashes**  | **ParentProcessId**  |
 | - | **ParentImage**  |  - | **ParentCommandLine**  | -  |
 
-Example default configuration file: [processCreate.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/processCreate.xml)
+**Example default configuration file: [processCreate.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/processCreate.xml)**
 
 
 ### ▶ Event ID 3 ➡ NetworkConnect
@@ -35,7 +35,7 @@ All Description Fields:
 | **SourceHostname**  | **SourcePort**  |  **SourcePortName** | **DestinationIsIpv6**  | **DestinationIp**  |
 | -  | **DestinationHostname**  |  **DestinationPort** | **DestinationPortName**  | -  |
 
-Example default configuration file: [networkConnections.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/networkConnections.xml)
+**Example default configuration file: [networkConnections.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/networkConnections.xml)**
 
 ### ▶ Event ID 5 ➡ ProcessTerminate
 This event provides information about newly terminated processes.
@@ -45,11 +45,18 @@ All Description Fields:
 |---|---|---|---|---|
 | **RuleName**  |  **UtcTime** |  **ProcessGuid** |**ProcessId**|  **Image** |
 
-Example default configuration file: [processTerminate.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/processTerminate.xml)
+**Example default configuration file: [processTerminate.xml](https://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/processTerminate.xml)**
 
-- Event ID 3  => NetworkConnect
-- Event ID 5  => ProcessTerminate
-- Event ID 9  => RawAccessRead
+### ▶ Event ID 9 ➡ RawAccessRead
+This event detects reading operations mostly used by malwares for data exfiltration.
+
+All Description Fields:
+| ⬇  | ⬇  | ⬇  | ⬇  |  ⬇ |
+|---|---|---|---|---|
+| **RuleName**  |  **UtcTime** |  **ProcessGuid** |**ProcessId**|  **Image** |
+
+**Example default configuration file: [rawAccessRead.xml](hhttps://github.com/oz9un/SysmonForLinux-Manual/blob/main/Description%20Field%20Examples/rawAccessRead.xml)**
+
 - Event ID 10 => ProcessAccess
 - Event ID 11 => FileCreate
 - Event ID 16 => Sysmon Config Change
