@@ -1,0 +1,56 @@
+<Sysmon schemaversion="4.70">
+   <EventFiltering>
+     <!-- Event ID 1 == ProcessCreate. Log only ping process. -->
+     <RuleGroup name="" groupRelation="or">
+  	    <ProcessCreate onmatch="include">
+          <RuleName condition="is"></RuleName>
+          <UtcTime condition="is"></UtcTime> 
+          <ProcessGuid condition="is"></ProcessGuid> 
+          <ProcessId condition="is"></ProcessId> 
+          <Image condition="is"></Image> 
+          <FileVersion condition="is"></FileVersion> 
+          <Description condition="is"></Description> 
+          <Product condition="is"></Product> 
+          <Company condition="is"></Company> 
+          <OriginalFileName condition="is"></OriginalFileName> 
+          <CommandLine condition="is"></CommandLine> 
+          <CurrentDirectory condition="is"></CurrentDirectory> 
+          <User condition="is"></User> 
+          <LogonGuid condition="is"></LogonGuid> 
+          <LogonId condition="is"></LogonId> 
+          <TerminalSessionId condition="is"></TerminalSessionId> 
+          <IntegrityLevel condition="is"></IntegrityLevel> 
+          <Hashes condition="is"></Hashes> 
+          <ParentProcessGuid condition="is"></ParentProcessGuid> 
+          <ParentProcessId condition="is"></ParentProcessId> 
+          <ParentImage condition="is"></ParentImage> 
+          <ParentCommandLine condition="is"></ParentCommandLine>
+  	    </ProcessCreate>
+     </RuleGroup>
+     <!-- BELOW PART DISABLES ALL OTHER LOGS FOR FIXING THE MESS!-->
+     <!-- Event ID 3 == NetworkConnect Detected. Do not log anything!-->
+     <RuleGroup name="" groupRelation="or">
+     	<NetworkConnect onmatch="include"/>
+     </RuleGroup>
+    <!-- Event ID 5 == ProcessTerminate. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+    	<ProcessTerminate onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 9 == RawAccessRead. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+    	<RawAccessRead onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 10 == ProcessAccess. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+    	<ProcessAccess onmatch="include"/>
+    </RuleGroup>
+    <!-- Event ID 11 == FileCreate. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+    	<FileCreate onmatch="include"/>
+    </RuleGroup>
+    <!--Event ID 23 == FileDelete. Do not log anything! -->
+    <RuleGroup name="" groupRelation="or">
+    	<FileDelete onmatch="include"/>
+    </RuleGroup>
+  </EventFiltering>
+</Sysmon>
