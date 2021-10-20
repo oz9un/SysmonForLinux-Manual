@@ -10,7 +10,9 @@ For further information about events and configuration options; you can visit my
 
 It was developed by Microsoft as an open source project. Even though it is doubtful to see such a contribution, I am very glad about it 🤭
 
-![sus_gif](https://media4.giphy.com/media/ANbD1CCdA3iI8/giphy.gif?cid=ecf05e47chlsv1aaptk03nsstucjmbytwln7w8t9locgvmfi&rid=giphy.gif&ct=g)
+<p align="center">
+          <img src="https://media4.giphy.com/media/ANbD1CCdA3iI8/giphy.gif?cid=ecf05e47chlsv1aaptk03nsstucjmbytwln7w8t9locgvmfi&rid=giphy.gif&ct=g"></img>
+</p>
 
 <p>&nbsp;</p>
 
@@ -74,7 +76,9 @@ Output:
  
 As you can see, we successfully created a configuration file according to our properties and caught some malicious events already!
 
-![hacker_gif](https://media4.giphy.com/media/TOWeGr70V2R1K/giphy.gif?cid=ecf05e47a1op0mndh2ygfi3sf7fx21ioab3rxnp60jdeezsn&rid=giphy.gif&ct=g)
+<p align="center">
+          <img src="https://media4.giphy.com/media/TOWeGr70V2R1K/giphy.gif?cid=ecf05e47a1op0mndh2ygfi3sf7fx21ioab3rxnp60jdeezsn&rid=giphy.gif&ct=g"></img>
+</p>
 
 <p>&nbsp;</p>
 
@@ -84,8 +88,10 @@ This is at the end of my first post about SysmonForLinux. I plan to write much m
 Github: https://github.com/oz9un
 Twitter: https://twitter.com/oz9un
 
-![cat_gif](https://media4.giphy.com/media/iPiUxztIL4Sl2/giphy.gif?cid=ecf05e47u8cqoaovibilphanyitfewmsnw8wa7c35tqxez0p&rid=giphy.gif&ct=g)
+<p align="center">
+          <img src="https://media4.giphy.com/media/iPiUxztIL4Sl2/giphy.gif?cid=ecf05e47u8cqoaovibilphanyitfewmsnw8wa7c35tqxez0p&rid=giphy.gif&ct=g"></img>
+</p>
+  
 
- 
  
 
