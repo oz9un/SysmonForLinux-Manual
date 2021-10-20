@@ -31,6 +31,7 @@ As a result, you can guess how chaotic the log file has become. This is why we d
 
 File Create event has 7 different description fields that we can use as filters:
 ![Description Fields](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/bw6rxk7loe0i65y60rx1.png)
+
 You can view all description fields for each event on my [github](https://github.com/oz9un/SysmonForLinux-Manual) page!
 
 When creating a configuration file (xml) for SysmonForLinux, we can use this fields as a filter.
@@ -68,6 +69,7 @@ To view sysmon's log file:
 tail -f /var/log/syslog | sudo /opt/sysmon/sysmonLogView -X
 ```
 Output:
+
 ![Sysmon Log Output](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/h3ujafruawscruow8w2c.png)
  
 As you can see, we successfully created a configuration file according to our properties and caught some malicious events already!
