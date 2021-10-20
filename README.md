@@ -99,7 +99,7 @@ All Description Fields:
 <p>&nbsp;</p>
 
 ### ▶ Event ID 11 ➡ FileCreate
-This event detects when file is *created* or *overwrited*. This event can be useful when observing auto-startup folders, which are the favorite folder for malicious activites.
+This event detects when file is *created*. This event can be useful when observing auto-startup folders, which are the favorite folder for malicious activites.
     
 All Description Fields:
 | ⬇  | ⬇  | ⬇  | ⬇  |  ⬇ |
